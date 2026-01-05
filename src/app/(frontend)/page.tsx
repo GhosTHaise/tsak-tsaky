@@ -9,22 +9,31 @@ import HeroSection from '@/components/shadcn-studio/blocks/hero-section-01/hero-
 
 const navigationData: NavigationSection[] = [
   {
-    title: 'Home',
-    href: '#'
+    title: 'Accueil',
+    href: '/'
   },
   {
-    title: 'Products',
-    href: '#'
+    title: 'Restaurants',
+    href: '/restaurants'
   },
   {
-    title: 'About Us',
-    href: '#'
+    title: 'Commander',
+    href: '/commande'
   },
   {
-    title: 'Contacts',
-    href: '#'
+    title: 'Comment ça marche',
+    href: '/comment-ca-marche'
+  },
+  {
+    title: 'Devenir partenaire',
+    href: '/partenaires'
+  },
+  {
+    title: 'Contact',
+    href: '/contact'
   }
 ]
+
 
 export default async function HomePage() {
   const headers = await getHeaders()

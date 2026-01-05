@@ -5,10 +5,10 @@ const HeroSection = () => {
   return (
     <section className='flex min-h-[calc(100dvh-4rem)] flex-1 flex-col justify-between gap-12 overflow-x-hidden pt-8 sm:gap-16 sm:pt-16 lg:gap-24 lg:pt-24'>
       {/* Hero Content */}
-      <div className='mx-auto flex max-w-7xl flex-col items-center gap-8 px-4 text-center sm:px-6 lg:px-8'>
-        <div className='bg-muted flex items-center gap-2.5 rounded-full border px-3 py-2'>
+      <div className='mx-auto flex max-w-7xl flex-col items-center gap-6 lg:gap-8 px-4 text-center sm:px-6 lg:px-8'>
+        <div className='lg:bg-muted flex lg:flex-row flex-col items-center gap-2.5 rounded-full lg:border px-3 py-2 text-description'>
           <Badge>Propulsé par l’IA</Badge>
-          <span className='text-muted-foreground'>pour la restauration et la livraison</span>
+          <span className='text-muted-foreground max-lg:bg-muted rounded-full max-lg:border leading-4 max-lg:py-1 max-lg:px-2'>Pour la restauration et la livraison</span>
         </div>
 
         <h1 className='text-3xl leading-[1.29167] font-bold text-balance sm:text-4xl lg:text-5xl'>
@@ -48,7 +48,7 @@ const HeroSection = () => {
           chaudement et sans effort
         </h1>
 
-        <p className='text-muted-foreground'>
+        <p className='text-muted-foreground text-description'>
           Plongez dans un monde de saveurs avec les meilleurs restaurants près de chez vous.
           <br />
           Des plats savoureux, des menus variés et une livraison rapide, directement à votre porte.

@@ -141,3 +141,8 @@ svg {
   }
 }
 
+@layer utilities {
+  .text-description {
+    @apply text-base max-lg:text-sm;
+  }
+}
