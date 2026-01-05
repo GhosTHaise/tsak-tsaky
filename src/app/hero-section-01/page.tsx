@@ -1,11 +1,6 @@
-import { headers as getHeaders } from 'next/headers.js'
-import { getPayload } from 'payload'
-import React from 'react'
-
-import config from '@/payload.config'
-import './styles.css'
-import Header, { NavigationSection } from '@/components/shadcn-studio/blocks/hero-section-01/header'
 import HeroSection from '@/components/shadcn-studio/blocks/hero-section-01/hero-section-01'
+import Header from '@/components/shadcn-studio/blocks/hero-section-01/header'
+import type { NavigationSection } from '@/components/shadcn-studio/blocks/hero-section-01/header'
 
 const navigationData: NavigationSection[] = [
   {
@@ -26,12 +21,7 @@ const navigationData: NavigationSection[] = [
   }
 ]
 
-export default async function HomePage() {
-  const headers = await getHeaders()
-  const payloadConfig = await config
-  const payload = await getPayload({ config: payloadConfig })
-  const { user } = await payload.auth({ headers })
-
+const HeroSectionPage = () => {
   return (
     <div className='relative'>
       {/* Header Section */}
@@ -44,3 +34,5 @@ export default async function HomePage() {
     </div>
   )
 }
+
+export default HeroSectionPage
