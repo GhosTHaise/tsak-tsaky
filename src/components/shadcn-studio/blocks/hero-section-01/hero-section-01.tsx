@@ -1,5 +1,6 @@
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
+import { ArrowRight } from 'lucide-react'
 
 const HeroSection = () => {
   return (
@@ -54,8 +55,9 @@ const HeroSection = () => {
           Des plats savoureux, des menus variés et une livraison rapide, directement à votre porte.
         </p>
 
-        <Button size='lg' asChild>
-          <a href='#'>Commander maintenant</a>
+        <Button className='btn-red_primary' size='lg'>
+          Commander maintenant
+          <ArrowRight />
         </Button>
       </div>
 

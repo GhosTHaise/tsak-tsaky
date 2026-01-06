@@ -1,4 +1,6 @@
 import React from 'react'
+import { Button } from '../ui/button'
+import { ArrowRight } from 'lucide-react'
 
 const TasteSection = () => {
     return (
@@ -6,15 +8,21 @@ const TasteSection = () => {
             <div className="section-container w-full">
                 <div className='flex w-full flex-row lg:flex-col justify-between'>
                     <div className='flex flex-col gap-5 w-full text-left max-w-[657px]'>
-                        <h1 className='font-semibold text-5xl leading-[100%]'>
-                            Savor the taste of perfection
+                        <h1 className='section_h1 leading-[100%]'>
+                            Qu’est-ce qu’on mange aujourd’hui ?
                         </h1>
-                        <p className='text-xl text-muted-foregrounds leading-7'>
-                            Welcom to Restaurant where passion meets the plate.<br />
-                            From sizzling appetsers to signature desserts, every dish is crafted to delight your senses.
+                        <p className='text-muted-foreground text-description leading-7'>
+                            Une nouvelle façon de commander auprès de vos restaurants préférés.<br />
+                            Simple, rapide et pratique pour vos repas du quotidien.
                         </p>
                         <div className="flex gap-[14px] items-center">
-
+                            <Button className='btn-red_primary'>
+                                Commander maintenant
+                                <ArrowRight />
+                            </Button>
+                            <Button className='btn-red_secondary'>
+                                Explorer les restaurants
+                            </Button>
                         </div>
                     </div>
                     <div className='flex-1'></div>
