@@ -3,9 +3,9 @@ import { Button } from '@/components/ui/button'
 
 const HeroSection = () => {
   return (
-    <section className='flex min-h-[calc(100dvh-4rem)] flex-1 flex-col justify-between gap-12 overflow-x-hidden pt-8 sm:gap-16 sm:pt-16 lg:gap-24 lg:pt-24'>
+    <section className='section-wrapper'>
       {/* Hero Content */}
-      <div className='mx-auto flex max-w-7xl flex-col items-center gap-6 lg:gap-8 px-4 text-center sm:px-6 lg:px-8'>
+      <div className='section-container'>
         <div className='lg:bg-muted flex lg:flex-row flex-col items-center gap-2.5 rounded-full lg:border px-3 py-2 text-description'>
           <Badge>Propulsé par l’IA</Badge>
           <span className='text-muted-foreground max-lg:bg-muted rounded-full max-lg:border leading-4 max-lg:py-1 max-lg:px-2'>Pour la restauration et la livraison</span>
