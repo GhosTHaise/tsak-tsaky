@@ -6,6 +6,7 @@ import config from '@/payload.config'
 import './styles.css'
 import Header, { NavigationSection } from '@/components/shadcn-studio/blocks/hero-section-01/header'
 import HeroSection from '@/components/shadcn-studio/blocks/hero-section-01/hero-section-01'
+import TasteSection from '@/components/home/taste-section'
 
 const navigationData: NavigationSection[] = [
   {
@@ -48,6 +49,7 @@ export default async function HomePage() {
 
       {/* Main Content */}
       <main className='flex flex-col'>
+        <TasteSection />
         <HeroSection />
       </main>
     </div>
