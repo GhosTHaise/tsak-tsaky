@@ -17,6 +17,7 @@ import {
 import { cn } from '@/lib/utils'
 
 import Logo from '@/components/shadcn-studio/logo'
+import Image from 'next/image'
 
 export type NavigationSection = {
   title: string
@@ -34,7 +35,7 @@ const Header = ({ navigationData, className }: HeaderProps) => {
       <div className='mx-auto flex h-full max-w-7xl items-center justify-between gap-6 px-4 sm:px-6 lg:px-8'>
         {/* Logo */}
         <a href='#'>
-          <Logo className='gap-3' />
+          <Image src="/logo/logo.svg" alt="Logo" width={120} height={40} />
         </a>
 
         {/* Navigation */}
