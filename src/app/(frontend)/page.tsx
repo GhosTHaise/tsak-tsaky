@@ -8,34 +8,6 @@ import Header, { NavigationSection } from '@/components/shadcn-studio/blocks/her
 import HeroSection from '@/components/shadcn-studio/blocks/hero-section-01/hero-section-01'
 import TasteSection from '@/components/home/taste-section'
 
-const navigationData: NavigationSection[] = [
-  {
-    title: 'Accueil',
-    href: '/'
-  },
-  {
-    title: 'Restaurants',
-    href: '/restaurants'
-  },
-  {
-    title: 'Commander',
-    href: '/commande'
-  },
-  {
-    title: 'Comment ça marche',
-    href: '/comment-ca-marche'
-  },
-  {
-    title: 'Devenir partenaire',
-    href: '/partenaires'
-  },
-  {
-    title: 'Contact',
-    href: '/contact'
-  }
-]
-
-
 export default async function HomePage() {
   const headers = await getHeaders()
   const payloadConfig = await config
@@ -45,8 +17,6 @@ export default async function HomePage() {
   return (
     <div className='relative'>
       {/* Header Section */}
-      <Header navigationData={navigationData} />
-
       {/* Main Content */}
       <main className='flex flex-col'>
         <TasteSection />
