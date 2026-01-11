@@ -2,8 +2,8 @@ import { FacebookIcon, InstagramIcon, TwitterIcon, YoutubeIcon } from 'lucide-re
 
 import { Separator } from '@/components/ui/separator'
 
-import Logo from '@/components/shadcn-studio/logo'
 import Image from 'next/image'
+import { navigationData } from '../shadcn-studio/blocks/hero-section-01/navbar'
 
 const Footer = () => {
     return (
@@ -15,19 +15,14 @@ const Footer = () => {
                     </div>
                 </a>
 
-                <div className='flex items-center gap-5 whitespace-nowrap'>
-                    <a href='#' className='opacity-80 transition-opacity duration-300 hover:opacity-100'>
-                        About
-                    </a>
-                    <a href='#' className='opacity-80 transition-opacity duration-300 hover:opacity-100'>
-                        Features
-                    </a>
-                    <a href='#' className='opacity-80 transition-opacity duration-300 hover:opacity-100'>
-                        Works
-                    </a>
-                    <a href='#' className='opacity-80 transition-opacity duration-300 hover:opacity-100'>
-                        Career
-                    </a>
+                <div className='flex flex-col sm:flex-row flex-wrap items-center gap-5 whitespace-nowrap'>
+                    {
+                        navigationData.map((item, index) => (
+                            <a href={item.href} className='opacity-80 transition-opacity duration-300 hover:opacity-100' key={index}>
+                                {item.title}
+                            </a>
+                        ))
+                    }
                 </div>
 
                 <div className='flex items-center gap-4'>
@@ -50,11 +45,11 @@ const Footer = () => {
 
             <div className='mx-auto flex max-w-7xl justify-center px-4 py-8 sm:px-6'>
                 <p className='text-center font-medium text-balance'>
-                    {`©${new Date().getFullYear()}`}{' '}
+                    ©{new Date().getFullYear()}{' '}
                     <a href='#' className='hover:underline'>
                         GhostCorp
                     </a>
-                    , Made with ❤️ for better web.
+                    . Vos plats préférés, livrés chez vous en toute simplicité 🛵🍛
                 </p>
             </div>
         </footer>
