@@ -15,8 +15,6 @@ import {
 } from '@/components/ui/navigation-menu'
 
 import { cn } from '@/lib/utils'
-
-import Logo from '@/components/shadcn-studio/logo'
 import Image from 'next/image'
 
 export type NavigationSection = {
@@ -25,11 +23,37 @@ export type NavigationSection = {
 }
 
 type HeaderProps = {
-  navigationData: NavigationSection[]
   className?: string
 }
 
-const Header = ({ navigationData, className }: HeaderProps) => {
+export const navigationData: NavigationSection[] = [
+  {
+    title: 'Accueil',
+    href: '/'
+  },
+  {
+    title: 'Restaurants',
+    href: '/restaurants'
+  },
+  {
+    title: 'Commander',
+    href: '/commande'
+  },
+  {
+    title: 'Comment ça marche',
+    href: '/comment-ca-marche'
+  },
+  {
+    title: 'Devenir partenaire',
+    href: '/partenaires'
+  },
+  {
+    title: 'Contact',
+    href: '/contact'
+  }
+]
+
+const Navbar = ({ className }: HeaderProps) => {
   return (
     <header className={cn('bg-background sticky top-0 z-50 h-16 border-b', className)}>
       <div className='mx-auto flex h-full max-w-7xl items-center justify-between gap-6 px-4 sm:px-6 lg:px-8'>
@@ -86,4 +110,4 @@ const Header = ({ navigationData, className }: HeaderProps) => {
   )
 }
 
-export default Header
+export default Navbar

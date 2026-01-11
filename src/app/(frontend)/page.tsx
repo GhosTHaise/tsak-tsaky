@@ -4,7 +4,7 @@ import React from 'react'
 
 import config from '@/payload.config'
 import './styles.css'
-import Header, { NavigationSection } from '@/components/shadcn-studio/blocks/hero-section-01/header'
+import Header, { NavigationSection } from '@/components/shadcn-studio/blocks/hero-section-01/navbar'
 import HeroSection from '@/components/shadcn-studio/blocks/hero-section-01/hero-section-01'
 import TasteSection from '@/components/home/taste-section'
 
