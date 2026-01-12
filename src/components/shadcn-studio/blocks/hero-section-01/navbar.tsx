@@ -16,6 +16,7 @@ import {
 
 import { cn } from '@/lib/utils'
 import Image from 'next/image'
+import LoginButton from './_components/login-button'
 
 export type NavigationSection = {
   title: string
@@ -85,9 +86,7 @@ const Navbar = ({ className }: HeaderProps) => {
 
         {/* Navigation for small screens */}
         <div className='flex gap-4 md:hidden'>
-          <Button className='rounded-lg' asChild>
-            <a href='#'>Login</a>
-          </Button>
+          <LoginButton />
 
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
